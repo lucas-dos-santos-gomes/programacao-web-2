@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Lucas dos Santos Gomes">
+  <title>Notas do Aluno</title>
+</head>
+<body>
+  <h1>Notas do Aluno - Lucas dos Santos Gomes</h1>
+  <form>
+    <p>
+      <label for="student-name">Nome do aluno:</label>
+      <input type="text" id="student-name" placeholder="Primeiro nome" required />
+    </p>
+    
+    <p>Gênero:</p>
+
+    <p>
+      <input type="radio" name="gender" id="male" class="gender" value="Masculino" checked />
+      <label for="male">Masculino</label>
+    </p>
+    <p>
+      <input type="radio" name="gender" id="female" class="gender" value="Feminino" />
+      <label for="female">Feminino</label>
+    </p>
+
+    <p>
+      <label for="notebook-grade">Nota de caderno:</label>
+      <input type="text" id="notebook-grade" class="grade" placeholder="9.5" required />
+    </p>
+    <p>
+      <label for="seminar-grade">Nota do seminário:</label>
+      <input type="text" id="seminar-note" class="grade" placeholder="10" required />
+    </p>
+    <p>
+      <label for="test-grade">Nota da prova:</label>
+      <input type="text" id="test-name" class="grade" placeholder="6.75" required />
+    </p>
+    <button class="submit-button">Exibir média e situação</button>
+    <p class="display-media"></p>
+    <p class="display-situation"></p>
+  </form>
+
+  <script src="./script.js"></script>
+</body>
+</html>
