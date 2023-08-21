@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fuso Horário</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      min-height: 100vh;
+    }
+    img {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <img src="world.png" alt="Globo Terrestre">
+  <form>
+    <h1>Programa Fuso Horário</h1>
+    <p>Hora no Brasil (h.m):
+      <input type="text" id="inHoraBrasil" required>
+    </p>
+    <p>
+      <button>Exibir Hora na França</button>
+    </p>
+    <h3 id="outHoraFranca"></h3>
+  </form>
+  <script src="./script.js"></script>
+</body>
+</html>
