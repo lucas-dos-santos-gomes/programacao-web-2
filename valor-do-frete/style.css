@@ -1,0 +1,25 @@
+body{
+  background-color: rgb(122, 122, 213);
+}
+
+h1 {
+  font-size: 40pt;
+  color: rgb(136, 13, 243);
+}
+
+p {
+  font-size: 25pt;
+}
+
+div {
+  background-color: rgb(199, 199, 232);
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+}   
+
+select {
+  width: 200px;
+  height:20px;
+}
