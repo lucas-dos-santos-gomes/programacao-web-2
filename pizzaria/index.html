@@ -22,7 +22,7 @@
         <input type="radio" id="snacks" name="foods" />
         <label for="snacks">Salgados</label>
       </div>
-      <div>
+      <div class="type-items">
         <span>Item:</span>
         <select class="pizza">
           <option value="media">Pizza Média</option>
@@ -41,6 +41,12 @@
         </select>
       </div>
     </div>
+    <p>Detalhes do Item:
+      <input type="text" id="inDetalhes" class="detalhes">
+      <input type="button" value="Adicionar" id="btAdicionar">
+    </p>
+    <pre id="order-completed"></pre>
   </form>
+  <script src="script.js"></script>        
 </body>
 </html>
