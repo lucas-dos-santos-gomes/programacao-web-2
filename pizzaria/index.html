@@ -12,10 +12,34 @@
   <form>
     <h1>Pizza Avenida - Controle de Pedidos</h1>
     <hr />
-    <div class="flex">
-      <p>Item do Pedido:</p>
-      <input type="radio" id="pizza" />
-      <label for="pizza">Pizza</label>
+    <div class="food-items">
+      <div class="order-items">
+        <p>Item do Pedido:</p>
+        <input type="radio" id="pizza" name="foods" autofocus />
+        <label for="pizza">Pizza</label>
+        <input type="radio" id="drink" name="foods" />
+        <label for="drink">Bebida</label>
+        <input type="radio" id="snacks" name="foods" />
+        <label for="snacks">Salgados</label>
+      </div>
+      <div>
+        <span>Item:</span>
+        <select class="pizza">
+          <option value="media">Pizza Média</option>
+          <option value="grande">Pizza Grande</option>
+          <option value="familia">Pizza Família</option>
+        </select>
+        <select class="drink">
+          <option value="refri">Refrigerante Litro</option>
+          <option value="suco">Jarra de Suco</option>
+          <option value="agua">Água Mineral</option>
+        </select>
+        <select class="snacks">
+          <option value="esfiha">Esfiha</option>
+          <option value="coxinha">Coxinha</option>
+          <option value="bauru">Bauru</option>
+        </select>
+      </div>
     </div>
   </form>
 </body>
