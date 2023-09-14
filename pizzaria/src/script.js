@@ -1,5 +1,8 @@
 const foodItems = document.querySelectorAll(".order-items input");
 const selectItems = document.querySelectorAll(".type-items select");
+const details = document.querySelector(".detalhes");
+const button = document.querySelector("#adicionar-detalhe");
+const pre = document.querySelector("pre");
 
 function hiddenSelects() {
   foodItems.forEach(e1 => {
@@ -11,11 +14,18 @@ function hiddenSelects() {
         }
       });
     }
+    e1.onclick = hiddenSelects;
   });
 }
 
-foodItems.forEach(e => {
-  e.onclick = hiddenSelects;
-});
-
 hiddenSelects();
+button.onclick = () => {
+  foodItems.forEach(e => {
+    if(e.checked) {
+      const select = document.querySelector(`.${e.id}`);
+      pre.innerHTML += `\n${select.selectedOptions[0].innerText} ${(details.value != "") ? ("(" + details.value + ")") : ""}
+      `;
+    }
+  });
+  details.value = "";
+}
