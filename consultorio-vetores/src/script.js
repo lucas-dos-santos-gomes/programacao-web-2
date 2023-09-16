@@ -10,21 +10,35 @@ const patientsList = document.querySelector(".patient-list");
 
 let patientsArray = [];
 
-form.onsubmit = e => {
-  e.preventDefault();
-  (e.submitter === buttons.add) && addPatient("push");
-  (e.submitter === buttons.urgency) && addPatient("unshift");
+const clearInput = () => {
+  patientsInput.value = "";
+  patientsInput.focus();
+}
 
+const innerPatients = () => {
   patientsList.innerHTML = "";
-
   patientsArray.forEach(item => {
     const li = document.createElement("li");
     li.innerHTML = item;
     patientsList.appendChild(li);
   });
+}
 
-  patientsInput.value = "";
-  patientsInput.focus();
+form.onsubmit = e => {
+  e.preventDefault();
+
+  if(patientsArray.length === 15) {
+    alert("Número máximo de pacientes foi atingido!");
+    clearInput();
+    return;
+  }
+
+  (e.submitter === buttons.add) && addPatient("push");
+  (e.submitter === buttons.urgency) && addPatient("unshift");
+
+  innerPatients();
+
+  clearInput();
 }
 
 function addPatient(method) {
@@ -35,4 +49,19 @@ function addPatient(method) {
     method === "push" && patientsArray.push(patientsInput.value);
     method === "unshift" && patientsArray.unshift(patientsInput.value);
   }
+}
+
+buttons.assist.onclick = () => {
+  if(patientsInput.value === "") {
+    if(patientsArray.length === 0) {
+      alert("Nenhum paciente para ser atendido.");
+    } else {
+      patient.innerHTML = patientsArray[0];
+      patientsArray.shift();
+      innerPatients();
+    }
+  } else {
+    patient.innerHTML = patientsInput.value;
+  }
+  clearInput();
 }
