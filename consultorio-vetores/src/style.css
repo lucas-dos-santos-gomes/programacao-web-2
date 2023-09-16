@@ -1,8 +1,21 @@
 .main {
   display: flex;
+  gap: 15px;
 }
 
 .tooth-image {
   width: 300px;
   border-radius: 25px;
+}
+
+.content-container .main-title {
+  border-bottom: 1px solid #CCC;
+}
+
+.content-container .patient-title {
+  font-size: 18px;
+}
+
+.content-container .patient-title .patient {
+  color: #F00;
 }
