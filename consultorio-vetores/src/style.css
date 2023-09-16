@@ -19,3 +19,10 @@
 .content-container .patient-title .patient {
   color: #F00;
 }
+
+.content-container .patient-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100px;
+}
