@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.title {
+  border-bottom: 1px solid #7A7878;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.hidden-label {
+  cursor: pointer;
+  margin-left: -22px;
+}
+
+#hidden {
+  display: none;
+}
