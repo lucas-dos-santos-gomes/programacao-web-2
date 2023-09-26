@@ -5,8 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Lucas dos Santos Gomes">
   <title>Valida Senha</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" media="all">
 </head>
 <body>
-  
+  <img src="./src/password.jfif" alt="Password wallpaper" />
+  <main class="main">
+    <h1>Programa Valida Senha</h1>
+    <form class="form">
+      <label for="password" class="password-label">Senha:</label>
+      <input type="password" id="password" placeholder="Senha@1234" required />
+      
+      <label for="hidden" class="hidden-label">
+        <i class="fa-solid fa-eye"></i>
+        <!-- <i class="fa-solid fa-eye-slash"></i> -->
+      </label>
+      <input type="checkbox" id="hidden" />
+
+      <button class="submit">Verificar validade da senha</button>
+    </form>
+    <h2 class="answser"></h2>
+  </main>
 </body>
 </html>
