@@ -7,6 +7,10 @@ body {
   overflow-y: hidden;
 }
 
+h2 {
+  font-size: 16px;
+}
+
 .title {
   border-bottom: 1px solid #7A7878;
 }
@@ -14,12 +18,13 @@ body {
 .input-container {
   display: flex;
   align-items: center;
+  gap: 5px;
   margin-bottom: 15px;
 }
 
 .hidden-label {
   cursor: pointer;
-  margin-left: -22px;
+  margin-left: -27px;
 }
 
 #hidden {
